@@ -70,7 +70,7 @@ elif "bored" in here:
 elif "you" in here:
 	print "well what would you like to know about me?"
 	bot_info = raw_input("> ")
-	if "age" in bot_info:
+	if "age" or "old" in bot_info:
 		print "I am exactly 'none of your business' years old.."
 
 elif "sad" in here:
