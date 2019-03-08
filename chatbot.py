@@ -5,18 +5,19 @@ new=2;
 
 url = "https://www.google.com/search?source=hp&ei=YLOBXNuVOqrZ5gLx8a6QCg&q=pizza+delivery&oq=pizza&gs_l=psy-ab.1.0.35i39j0i67l2j0l7.11184.11818..12510...2.0..0.146.655.1j5......0....1..gws-wiz.....6..0i131j0i20i263.loPt0C-DUv4"
 
-print "okay here we go"
 
-print "hello, I don't think we've met before."
-print "--------------------------------------"
+print "hello, I'm Nea.\n I don't think we've met before..."
+time.sleep(2)
 
 print "what is your name?"
 
 name = raw_input("> ")
+if "Tay" in name:
+	print "hey! that's my developer's name! I'll be sure to tell her :)"
+else:
+	print "hi, %s. " % name
 
-print "hi, %s. " % name
-
-print "now that we've gotten the boring stuff out of the way, tell me... what's your favorite color?"
+print "now that we've gotten the boring stuff out of the way, tell me...\n ...what's your favorite color?"
 
 color_list = ['blue', 'green', 'purple', 'brown', 'pink', 'black', 'white', 'yellow', 'orange', 'pink', 'red', 'grey', 'magenta', 'aqua']
 
@@ -27,9 +28,9 @@ if color in (color_list):
 else:
 	print "that's a weird color... but that's okay, I forgive you."
 
-print "-------------------------------------"
+time.sleep(1)
 
-
+#create options for dev info 
 print "why are you here?"
 
 here = raw_input('> ')
@@ -60,6 +61,8 @@ elif "hungry" in here:
 			print "have you tried using google? here, I'll open it for you..."
 			time.sleep(2)
 			webbrowser.open(url,new=new) 
+
+
 elif "bored" in here:
 	print "I'm sorry you're bored %s..do you want to play a game or hear a joke?" % name
 
@@ -72,3 +75,7 @@ elif "you" in here:
 
 elif "sad" in here:
 	print "okay, tell me more about what's bothering you, %s" % name
+
+else:
+	print "well, I'm not sure if I can do that. my developer may not have created that task for me yet. \n would you like to know more about her?"
+
