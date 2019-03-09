@@ -6,6 +6,8 @@ new=2;
 url = "https://www.google.com/search?source=hp&ei=YLOBXNuVOqrZ5gLx8a6QCg&q=pizza+delivery&oq=pizza&gs_l=psy-ab.1.0.35i39j0i67l2j0l7.11184.11818..12510...2.0..0.146.655.1j5......0....1..gws-wiz.....6..0i131j0i20i263.loPt0C-DUv4"
 
 
+
+
 print "hello, I'm Nea.\n I don't think we've met before..."
 time.sleep(2)
 
@@ -37,7 +39,7 @@ here = raw_input('> ')
 
 if "help" in here:
 	print "how can I help you, %s?" % name
-
+	
 	assistance = raw_input('> ')
 	if "find" in assistance:
 		print "have you tried Google.com? I hear that's where you can find anything.."
@@ -54,6 +56,8 @@ if "help" in here:
 			webbrowser.open(url,new=new) 
 	else:
 		print "have you tried asking someone smarter than me?"
+
+
 elif "hungry" in here:
 		print "would you like to order a pizza?"
 		pizza_answer = raw_input("> ")
@@ -63,10 +67,16 @@ elif "hungry" in here:
 			webbrowser.open(url,new=new) 
 
 
+#INSERTGAME
 elif "bored" in here:
 	print "I'm sorry you're bored %s..do you want to play a game or hear a joke?" % name
 
+elif "game" in here:
+	print "I love games. Do you want to play one?"
+#INSERTGAME
 
+
+#fix elif statement fix
 elif "you" in here:
 	print "well what would you like to know about me?"
 	bot_info = raw_input("> ")
@@ -76,6 +86,27 @@ elif "you" in here:
 elif "sad" in here:
 	print "okay, tell me more about what's bothering you, %s" % name
 
+elif "I'm" in here:
+	print "explain futher, please."
+#elif statement fix
+	explain = raw_input("> ")
+	if explain in "tired" or "sleep":
+		print "it sounds like maybe you should get some sleep, %s. don't worry, I'll still be here when you wake up." % name
+	else:
+		print "ahh..I see."
+
+
+
 else:
-	print "well, I'm not sure if I can do that. my developer may not have created that task for me yet. \n would you like to know more about her?"
+	print "well, I'm not sure if I can answer that. my developer may not have taught me yet. \n would you like to know more about my developer?"
+	dev_info = "her name is Taylor, but she likes to go by Tay. In video games, she likes to name her characters Mischa. sometimes, though, she goes by Teena...no idea what that's about"
+
+	dev_answer = raw_input("> ")
+	if "yes" in dev_answer:
+		print dev_info
+	else:
+		print "alright"
+
+
+
 
